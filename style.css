@@ -1,5 +1,6 @@
 :root {
-  --main-color: #807d7d;
+    --main-color: #807d7d;
+    --main-color-light: #cecece;
 }
 
 * {
@@ -14,6 +15,25 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.spinner {
+    border: 1em solid var(--main-color-light);
+    border-top: 1em solid var(--main-color);
+    border-radius: 50%;
+    width: 7em;
+    height: 7em;
+    /* animation: spin 7s linear infinite; */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .buttons {
@@ -33,7 +53,7 @@
 }
 
 .button.active {
-    background-color: #cecece; 
+    background-color: var(--main-color-light);
 }
 
 .button i {
